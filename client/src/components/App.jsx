@@ -5,7 +5,7 @@ import ReviewComponent from './ReviewComponent';
 import ReviewList from './ReviewSRC/seeReviews/ReviewList';
 import ReviewForm from './ReviewSRC/makeReviews/ReviewForm';
 
-const PORT = 3003;
+const PORT = 3000;
 
 class App extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class App extends React.Component {
   }
 
   getProduct() {
-    axios.get(`http://localhost:${PORT}/productreviews`).then(({ data }) => {
+    axios.get(`http://localhost:${PORT}/api/productreviews`).then(({ data }) => {
       this.setState({
         product: data[0],
         view: null,

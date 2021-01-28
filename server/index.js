@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/productreviews', productRoutes);
+app.use('/api/productreviews', productRoutes);
 
 app.listen(PORT, () => {
   console.log(`Reviews server running on ${PORT}...`);
